@@ -677,14 +677,38 @@
             "faction": "Radiant", 
             "name": "Monkey King", 
             "id": 114
+        },
+        {
+            "primary_attribute": "Intelligence", 
+            "faction": "Radiant", 
+            "name": "Dark Willow", 
+            "id": 119
+        },
+        {
+            "primary_attribute": "Agility", 
+            "faction": "Radiant", 
+            "name": "Pangolier", 
+            "id": 120
+        },
+        {
+            "primary_attribute": "Intelligence", 
+            "faction": "Dire", 
+            "name": "Grimstroke", 
+            "id": 121
+        },
+        {
+            "primary_attribute": "Strength", 
+            "faction": "Radiant", 
+            "name": "Mars", 
+            "id": 129
         }
     ], 
     "patches": [
         {
-            "heroes_released": 114, 
-            "patch_name": "7.06e", 
+            "heroes_released": 117, 
+            "patch_name": "7.21d", 
             "first_match_id": 3293000000, 
-            "last_match_id": 3306144409
+            "last_match_id": 4650059137
         }
     ]
 }
