@@ -168,9 +168,9 @@ def process_query():
 		result = give_result(query_list, faction, model, logger)
 		suggest_result_label['text'] = ""
 		if result < 50.0:
-			predict_result_label['text'] = "Dire has a %.2f%% chance to win" % (100 - result)
+			predict_result_label['text'] = "Шанс победы сил Тьмы - %.2f%%" % (100 - result)
 		else:
-			predict_result_label['text'] = "Radiant has a %.2f%% chance to win" % result
+			predict_result_label['text'] = "Шанс победы силь Света - %.2f%%" % result
 
 def main():
 	global suggest_button
@@ -185,21 +185,21 @@ def main():
 	hero_list = sorted(hero_list)
 	hero_list.insert(0, "")
 
-	root.title("Dota 2 predictor")
+	root.title("Dota 2 Predictor 7.21d RU")
 	root.minsize(width=450, height=480)
 	root.maxsize(width=450, height=480)
 
-	radiant_label = Label(root, text="Radiant team")
+	radiant_label = Label(root, text="Свет")
 	radiant_label.place(relx=0.15, rely=0.02)
 
-	dire_label = Label(root, text="Dire team")
+	dire_label = Label(root, text="Тьма")
 	dire_label.place(relx=0.67, rely=0.02)
 	
-	predict_button = Button(root, text="Predict winner", command=process_query)
+	predict_button = Button(root, text="Предсказать победителя", command=process_query)
 	predict_button.place(relx=0.22, rely=0.45)
 	predict_button.config(state="disabled")
 
-	suggest_button = Button(root, text="Suggest hero", command=process_query)
+	suggest_button = Button(root, text="Предложить ласт-пик", command=process_query)
 	suggest_button.place(relx=0.5, rely=0.45)
 	suggest_button.config(state="disabled")
 
@@ -216,7 +216,7 @@ def main():
 		box.bind("<<ComboboxSelected>>", ComboBoxSelected)
 		boxes.append(box)
 
-	avg_mmr = Label(root, text="Average MMR:")
+	avg_mmr = Label(root, text="Ваш ММР (или же средний ММР пати):")
 	avg_mmr.place(relx=0.4, rely=0.4, anchor=CENTER)
 
 	vcmd = (root.register(validate), '%d', '%i', '%P', '%s', '%S', '%v', '%V', '%W')
@@ -229,17 +229,17 @@ def main():
 	suggest_result_label = Label(root, text="")
 	suggest_result_label.place(relx = 0.5, rely=0.8, anchor=CENTER, )
 
-	info_label1 = Label(root, text="For predicting the winner, select all the heroes in the game.")
+	info_label1 = Label(root, text="Для предсказания победителя, выберите 10 героев.")
 	info_label1.place(x=10, y=250)
 
-	info_label2 = Label(root, text="For getting last pick suggestions, select the other 9 heroes.")
+	info_label2 = Label(root, text="Для получения вариантов ласт-пика, выберите 9 героев.")
 	info_label2.place(x=10, y=270)
 
-	label = Label(root, text="Andrei Apostoae, July 2017")
+	label = Label(root, text="Оригинальная версия от Andrei Apostoae. Обновленной командой td team.")
 	label.place(x=300, y=460)
 	label.configure(foreground="gray")
 
-	label = Label(root, text="Current patch: 7.06d")
+	label = Label(root, text="Текущий патч: 7.21d")
 	label.place(x=10,y=460)
 	label.configure(foreground="gray")
 
