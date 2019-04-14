@@ -37,7 +37,7 @@ def patch_data_example():
                 last_patch['last_match_id'])
 
     # information about specific patch
-    patch = get_patch('7.06e')
+    patch = get_patch('7.21d')
     logger.info("Match IDs for %s span between %d and %d", patch['patch_name'],
                 patch['first_match_id'], patch['last_match_id'])
 
