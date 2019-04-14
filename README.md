@@ -1,8 +1,8 @@
 # dota2-predictor
 
-## Table of Contents
-1. [Overview](#overview)
-2. [Basic usage](#basic)
+## Содержание
+1. [Описание](#overview)
+2. [Использование программы](#basic)
 3. [Downloading and running](#downloading)
     * [Linux](#linux)
     * [Windows](#windows)
@@ -15,16 +15,16 @@
 5. [Author's note](#author)
 6. [FAQ](#faq)
 
-## Overview <a name="overview"></a>
-dota2-predictor is a tool that uses Machine Learning over a dataset of over 500k past matches in order to predict the outcome of a game. This project achieves roughly 0.63 ROC AUC score using both logistic regression and neural networks.
+## Описание <a name="overview"></a>
+dota2-predictor-ru — это инструмент, который использует Машинное обучение в комбинации с датасетом на 500к матчей, с целью предсказывания результата матча. Этот проект достигает почти 0.63 рейтинга по ROC-кривой, используя при этом логит-регрессию и нейронные сети.
 
-## Basic usage <a name="basic"></a>
+## Использование программы <a name="basic"></a>
 
-The tool has two main use cases: one for simply predicting the outcome of the game knowing all the heroes and one for predicting what the best last pick is given a configuration of the other nine heroes. It uses the closest model available given the average MMR of your game.
+У инструмента есть две основных функции: одна предсказывает результат матча по пику персонажей, а другая предлагает героя на ласт-пик на основе заданных 9 героев. Используется лучшая модель, на основе Вашего ММР.
 
-For the first case, you should select all the heroes, write the average MMR and press the "Predict winner" button.
+Для первого случая, Вам нужно выбрать всех героев, написать свой ММР (или же средний ММР пати) и нажать кнопку "Предсказать победителя".
 
-For the second case, you should select all the other nine heroes in their corresponding team, write the average MMR and press the "Suggest hero" button. A list of top 10 hero suggestions will be displayed.
+Для второго случая, Вы должны расставить уже выбранных 9 героев по командам, написать свой ММР (или же средний ММР пати)и нажать кнопку "Предложить героя". В результате работы будет выведен список из топ 10 героев.
 
 | [![Suggest Hero](http://i.imgur.com/xbh8903.png)](http://i.imgur.com/xbh8903.png)  | [![Predict winner](http://i.imgur.com/MXDhZt2.png)](http://i.imgur.com/MXDhZt2.png)  |
 |:---:|:---:|
